@@ -2,9 +2,9 @@ main{
     background-color: #ffffff;
     color: #000000;
     font-family: Arial, sans-serif;
-    font-size: 1em;
+    font-size: clamp(0.1rem, 1.5vw, 1rem);
     line-height: 1.5em;
-    padding: 20px;
+    padding: 5px;
 }
 
 /*  Stage and others*/
@@ -64,6 +64,7 @@ main{
 
 
 .Digimon_table{
+    
     border-style: solid;
     border-width: 1px;
     border-color: #000;
@@ -95,4 +96,27 @@ main{
     border-style: solid;
     border-width: 1px;
     border-color: #000;
+}
+
+.Section{
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  font-size: 1rem;
+  border-collapse: collapse;
+}
+
+@media (max-width: 768px) {
+  table {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .coluna-opcional {
+    display: none;
+  }
 }

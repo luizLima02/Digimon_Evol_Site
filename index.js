@@ -254,6 +254,7 @@ function CreateDigimonTable(digimon_name){
 //CHILDS
 const child_section = document.createElement("section");
 child_section.setAttribute("id", "child_section");
+child_section.setAttribute("class", "Section");
 
 for (let i = 0; i < Childs.length; i++){
     const EggName = document.createElement("h3");
@@ -266,6 +267,7 @@ for (let i = 0; i < Childs.length; i++){
 //ROOKIES
 const rookie_section = document.createElement("section");
 rookie_section.setAttribute("id", "rookies_section");
+rookie_section.setAttribute("class", "Section");
 
 
 for (let i = 0; i < Rookies.length; i++){
