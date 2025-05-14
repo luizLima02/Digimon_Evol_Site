@@ -1,0 +1,112 @@
+main{
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, sans-serif;
+    font-size: clamp(0.1rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    padding: 5px;
+}
+
+/*  Stage and others*/
+.Stage_div{
+    border: none;
+    border-top: 3px double #333;
+    color: #333;
+    overflow: visible;
+    text-align: center;
+    height: 5px;
+}
+
+.Stage_div::after{
+    background: #fff;
+    content: "§";
+    padding: 0 4px;
+    position: relative;
+    top: -13px;
+}
+
+.Section_title {
+    background-color: #27557e;
+    color: #ffffff;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.Page_Title{
+    background-color: #27557e;
+    color: #ffffff;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.Info{
+    font-weight: bold;
+    padding: 10px;
+    border: #ad3232 solid 3px;
+    border-radius: 5px;
+}
+
+
+
+
+/*  Digimon and Tables*/
+.Digimon_section{
+    /*border-style: solid;*/
+    border-width: 5px;
+    width: 60%;
+}
+
+.Digimon_section table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+.Digimon_link{
+    text-decoration: none;
+    color: blue;
+    text-transform: uppercase;
+}
+
+.Digimon_link:visited{
+    color:  blue;; 
+}
+
+
+.Digimon_section .Digimon_table{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000;
+}
+
+.Digimon_section .Digimon_table th{
+    background-color: #8bb9df;
+    padding: 10px;
+    text-align: center;
+}
+
+.Digimon_section  .Digimon_table .Table_row_odd td{
+    background-color: #c4c1c1;
+    padding: 10px;
+    text-align: center;
+}
+
+.Digimon_section  .Digimon_table .Table_row_even td{
+    background-color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.Digimon_section .Digimon_img{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000;
+}
+

@@ -7,32 +7,23 @@ main{
     padding: 5px;
 }
 
-/*  Stage and others*/
-.Stage_div{
-    border: none;
-    border-top: 3px double #333;
-    color: #333;
-    overflow: visible;
-    text-align: center;
-    height: 5px;
-}
-
-.Stage_div::after{
-    background: #fff;
-    content: "§";
-    padding: 0 4px;
-    position: relative;
-    top: -13px;
-}
-
 .Section_title {
-    background-color: #27557e;
+    background-color: #6399c9;
     color: #ffffff;
     font-size: 1.5em;
     font-weight: bold;
     padding: 10px;
     text-align: center;
     border-radius: 5px;
+    border: #000000 solid 3px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.Section_title:visited{
+    background-color: #6399c9;;
 }
 
 .Page_Title{
@@ -50,73 +41,19 @@ main{
     padding: 10px;
     border: #ad3232 solid 3px;
     border-radius: 5px;
-}
-/*  Digimon and Tables*/
-.Digimon_link{
-    text-decoration: none;
-    color: blue;
-    text-transform: uppercase;
+    text-align: center;
 }
 
-.Digimon_link:visited{
-    color:  blue;; 
-}
-
-
-.Digimon_table{
-    
-    border-style: solid;
-    border-width: 1px;
-    border-color: #000;
-    border-radius: 5px;
-}
-
-.Digimon_table th{
-    background-color: #8bb9df;
+.Section_title{
+    width: 50%;
+    font-size: 1.5em;
+    font-weight: bold;
     padding: 10px;
     text-align: center;
-    border-radius: 5px;
+    margin: 20px auto;
 }
 
-.Digimon_table .Table_row_odd td{
-    background-color: #c4c1c1;
-    padding: 10px;
-    text-align: center;
-    border-radius: 5px;
+.Section_title:hover{
+    background-color: #051f36;
 }
 
-.Digimon_table .Table_row_even td{
-    background-color: #ffffff;
-    padding: 10px;
-    text-align: center;
-    border-radius: 5px;
-}
-
-.Digimon_img{
-    border-style: solid;
-    border-width: 1px;
-    border-color: #000;
-}
-
-.Section{
-    width: 100%;
-    overflow-x: auto;
-}
-
-table {
-  width: 100%;
-  font-size: 1rem;
-  border-collapse: collapse;
-}
-
-@media (max-width: 768px) {
-  table {
-    font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .coluna-opcional {
-    display: none;
-  }
-}
