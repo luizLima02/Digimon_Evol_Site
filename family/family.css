@@ -1,17 +1,24 @@
-main{
+.main{
     background-color: #ffffff;
     color: #000000;
     font-family: Arial, sans-serif;
     font-size: clamp(0.1rem, 1.5vw, 1rem);
     line-height: 1.5em;
-    padding-left: 0vw;
+    /*padding-left: 0vw;
     padding-right: 0vw;
 
-    @media (min-width: 768px) {
+    /*@media (min-width: 768px) {
         padding-left: 2.5vw;
         padding-right: 2.5vw;
-    }
+    }*/
 }
+
+@media (min-width: 1210px) {
+  .main {
+    width: 1160px;
+  }
+}
+
 
 /*  Stage and others*/
 .Stage_div{
@@ -70,17 +77,17 @@ main{
 
     margin: 25px auto;
 }
-
+/*
 .Digimon_section table{
     border-collapse: collapse;
     width: 100%;
     table-layout: fixed;
     white-space: nowrap;
-    overflow: hidden; /* Esconde o overflow */
+    overflow: hidden; 
     font-weight: bold;
-    
-}
 
+}
+*/
 
 .Digimon_link{
     text-decoration: none;
@@ -93,15 +100,53 @@ main{
 }
 
 
-.Digimon_section .Digimon_table{
+.Digimon_table{
+    width: 80%;
+    border-collapse: collapse;
+    font-family: "Helvetica Neue","HelveticaNeue",Arial,sans-serif; /* Fonte similar à da imagem */
+    font-size: 13px;
+    margin: 20px 0;
+    background-color: #f8f8f8;
     border-style: solid;
     border-width: 1px;
     border-color: #000;
     overflow: hidden;
+    
 }
 
+/* Cabeçalho da tabela */
+.Digimon_table th {
+    background-color: #e0e0e0;
+    border: 1px solid #000;
+    padding: 8px 12px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.Digimon_table td{
+    border: 1px solid #000;
+    text-align: center;
+}
+
+/* Linhas alternadas para melhor legibilidade */
+.Digimon_table tr:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+/* Ajuste para a primeira coluna (nomes dos Digimon) */
+.Digimon_table td:first-child {
+    font-weight: bold;
+    text-align: center;
+    
+}
+
+/* Espaçamento entre células */
+.Digimon_table th, .Digimon_table td {
+    white-space: nowrap;
+}
+/*
 .Digimon_table th, td{
-    width: fit-content; /* ou "auto" */
+    width: fit-content; 
     font-size: 0.4rem;
 
     @media (min-width: 768px) {
@@ -112,11 +157,12 @@ main{
         font-size: 0.6em;
     }
 }
-
+*/
+/*
 .Digimon_section .Digimon_table th{
     background-color: #8bb9df;
     text-align: center;
-    /*bordas*/
+    
     border-style: solid;
     border-width: 1px;
     border-color: #000;
@@ -125,22 +171,22 @@ main{
 .Digimon_section  .Digimon_table .Table_row_odd td{
     background-color: #c4c1c1;
     text-align: center;
-    /*bordas*/
+    
     border-style: solid;
     border-width: 1px;
     border-color: #000;
-}
-
+}*/
+/*
 .Digimon_section  .Digimon_table .Table_row_even td{
     background-color: #ffffff;
     text-align: center;
     border-radius: 5px;
-    /*bordas*/
+    
     border-style: solid;
     border-width: 1px;
     border-color: #000;
 }
-
+*/
 .Digimon_section .Digimon_img{
     border-style: solid;
     border-width: 1px;
