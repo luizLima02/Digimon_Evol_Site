@@ -20,6 +20,12 @@
 }
 
 
+.Requeriment{
+    font-family: "Helvetica Neue","HelveticaNeue",Arial,sans-serif; /* Fonte similar à da imagem */
+    font-weight: bold;
+    color: red;
+}
+
 /*  Stage and others*/
 .Stage_div{
     border: none;

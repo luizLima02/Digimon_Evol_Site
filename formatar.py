@@ -1,8 +1,8 @@
 
-arquivoEntrada = open("perfects.csv", "r")
-arquivoSaida = open("perfectsFormatado.js", "w")
+arquivoEntrada = open("mega.csv", "r")
+arquivoSaida = open("megaFormatado.js", "w")
 
-lista_String = "\nexport const Perfects = ["
+lista_String = "\nexport const Megas = ["
 
 evol_String = ""
 

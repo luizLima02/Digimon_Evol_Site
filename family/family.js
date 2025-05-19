@@ -1,4 +1,4 @@
-import { Digimons, Eggs, Childs, Rookies, Champions, Perfects} from '../utils/digimon.js';
+import { Digimons, Eggs, Childs, Rookies, Champions, Perfects, Megas} from '../utils/digimon.js';
 import {CreateDigimonTable} from '../utils/digimon.js';
 /*import {CreateRowDigimon} from '../utils/digimon.js';*/
 
@@ -46,6 +46,16 @@ for (let i = 0; i < Perfects.length; i++){
     perfect_section.appendChild(digimonTable);
 }
 
+//Megas
+const mega_section = document.createElement("section");
+mega_section.setAttribute("id", "mega_section");
+mega_section.setAttribute("class", "Section");
+
+for (let i = 0; i < Megas.length; i++){
+    const digimonTable = CreateDigimonTable(Megas[i]); 
+    mega_section.appendChild(digimonTable);
+}
+
 /////////////////////////////////////////////////// INFO ////////////////////////////////////////////////////////
 //info
 const info1 = document.createElement("p");
@@ -90,7 +100,15 @@ PerfectTitle.innerHTML = "Perfects";
 //divisor
 const PerfectDiv = document.createElement("hr");
 PerfectDiv.setAttribute("class", "Stage_div");
+///////////////////////////////////////////////// Megas //////////////////////////////////
+const MegaTitle = document.createElement("h2");
+MegaTitle.setAttribute("class", "Section_title");
+MegaTitle.innerHTML = "Megas";
+//divisor
+const MegaDiv = document.createElement("hr");
+MegaDiv.setAttribute("class", "Stage_div");
 
+//Main
 const main_div = document.getElementById("main");
 //info
 main_div.appendChild(info1);
@@ -112,4 +130,8 @@ main_div.appendChild(champion_section);
 main_div.appendChild(PerfectTitle);
 main_div.appendChild(PerfectDiv);
 main_div.appendChild(perfect_section);
+//mega
+main_div.appendChild(MegaTitle);
+main_div.appendChild(MegaDiv);
+main_div.appendChild(mega_section);
 
