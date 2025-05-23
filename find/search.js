@@ -89,14 +89,14 @@ form.addEventListener('submit', function(e) {
     const nome = nomeSelect.value;
     
     if (estagio && nome) {
-        mostra_evolucoes(nome, estagio);
+        mostra_evolucoes(nome);
 
     } else {
         alert('Por favor, selecione um gênero e um nome.');
     }
 });
 
-function mostra_evolucoes(digimon_name, estagio){
+function mostra_evolucoes(digimon_name){
     //pega o local para salvar os search
     const searchResult_div = document.getElementById("search_result");
     //limpa o div
@@ -104,11 +104,11 @@ function mostra_evolucoes(digimon_name, estagio){
         searchResult_div.removeChild(searchResult_div.firstChild);
     }
     /// Div digimon Atual
-    const target_digimon_div = document.createElement('div');;
+    const target_digimon_div = document.createElement('div');
     //mostra o digimon digimon_name
     const target_digimon = Digimons.get(digimon_name);
     const name = document.createElement('h3');
-    name.innerHTML = nomeSelect.value;
+    name.innerHTML = digimon_name;
     const image = document.createElement('img');
     image.src = target_digimon.getImg();
     image.setAttribute("width", "200");
