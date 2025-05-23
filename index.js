@@ -17,7 +17,7 @@ info3.innerHTML = "Digimon Search: to go from a digimo to its evolution.";
 ////////////////////////////////////////////////// CHILD //////////////////////////////////////////////////////
 //botão familia
 const FamilyButton = document.createElement("a");
-FamilyButton.setAttribute("href", "./family/family.html");
+FamilyButton.setAttribute("href", "./family/index.html");
 const FamilyBtitle = document.createElement("h2");
 FamilyBtitle.setAttribute("class", "Section_title");
 FamilyBtitle.innerHTML = "Digimon Tree";
@@ -25,7 +25,7 @@ FamilyButton.appendChild(FamilyBtitle);
 
 //botão Search
 const SearchButton = document.createElement("a");
-SearchButton.setAttribute("href", "./search/search.html");
+SearchButton.setAttribute("href", "./search/index.html");
 const SearchBtitle = document.createElement("h2");
 SearchBtitle.setAttribute("class", "Section_title");
 SearchBtitle.innerHTML = "Search Digimon";
