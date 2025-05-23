@@ -1,5 +1,8 @@
+body{
+    background-color:#030027;
+}
+
 main{
-    background-color: #ffffff;
     color: #000000;
     font-family: Arial, sans-serif;
     font-size: clamp(0.1rem, 1.5vw, 1rem);
@@ -15,7 +18,7 @@ main{
     padding: 10px;
     text-align: center;
     border-radius: 5px;
-    border: #000000 solid 3px;
+    border: #ffffff solid 3px;
 }
 
 a{
@@ -37,9 +40,10 @@ a{
 }
 
 .Info{
+    color: #ffffff;
     font-weight: bold;
     padding: 10px;
-    border: #ad3232 solid 3px;
+    border: #E03616 solid 3px;
     border-radius: 5px;
     text-align: center;
 }

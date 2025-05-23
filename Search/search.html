@@ -10,5 +10,30 @@
         <button onclick="window.location.href='../index.html'">Back</button>
         <h1 class="Page_Title">Evolution Search</h1>
     </main>
+    <div id="search_area">
+        <h1>Selecione um Estagio</h1>
+        <form id="formEstagios">
+            <label for="estagios">Estagio:</label>
+            <select id="estagios" name="estagios" required>
+                <option value="">Selecione...</option>
+                <option value="Childs">Childs</option>
+                <option value="Rookies">Rookies</option>
+                <option value="Champions">Champions</option>
+                <option value="Perfects">Perfects</option>
+                <option value="Megas">Megas</option>
+            </select>
+            
+            <div id="nomeContainer" style="display: none;">
+                <label for="nome">Nome:</label>
+                <select id="nome" name="nome" required>
+                    <!-- Opções serão preenchidas via JavaScript -->
+                </select>
+            </div>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <div id="search_result">
+    </div>
     <script type="module" src="search.js"></script>
   </html>

@@ -14,7 +14,8 @@ export function CreateDigimon({estagio = '',
                        btl = null, 
                        tech = null, 
                        decode = null, 
-                       quota = null
+                       quota = null,
+                       imagem = null,
                     }){
     let digimon = {
         estagio: estagio,
@@ -33,7 +34,17 @@ export function CreateDigimon({estagio = '',
         tech: tech,
         decode: decode,
         quota: quota,
-        img: "https://digimon.net/cimages/digimon/"+(nome.toLowerCase())+".jpg"
+        img: imagem == null ? "https://digimon.net/cimages/digimon/"+(nome.toLowerCase())+".jpg" : imagem,
+        getImg : function(){
+            if(this.estagio == "Egg"){
+                return "";
+            }
+            let imagem_Retorno = this.img;
+            if(this.nome == "greymon"){
+                imagem_Retorno = "https://digimon.net/cimages/digimon/greymon-first.jpg";
+            }
+            return imagem_Retorno;
+        }
     };
 
     return digimon;
@@ -41,7 +52,16 @@ export function CreateDigimon({estagio = '',
 
 
 export const Digimons = new Map();
+//EGGS
+Digimons.set("Red-Egg" , CreateDigimon({estagio: "Egg", nome: "Red-Egg"}));
+Digimons.set("Yellow-Egg" , CreateDigimon({estagio: "Egg", nome: "Yellow-Egg"}));
+Digimons.set("Grey-Egg" , CreateDigimon({estagio: "Egg", nome: "Grey-Egg"}));
+Digimons.set("Purple-Egg" , CreateDigimon({estagio: "Egg", nome: "Purple-Egg"}));
+Digimons.set("Green-Egg" , CreateDigimon({estagio: "Egg", nome: "Green-Egg"}));
+Digimons.set("Peach-Egg" , CreateDigimon({estagio: "Egg", nome: "Peach-Egg"}));
+Digimons.set("Blue-Egg" , CreateDigimon({estagio: "Egg", nome: "Blue-Egg"}));
 
+////
 Digimons.set("gigimon" , CreateDigimon({estagio: "Child", nome: "gigimon"}));
 Digimons.set("koromon" , CreateDigimon({estagio: "Child", nome: "koromon"}));
 Digimons.set("tunomon" , CreateDigimon({estagio: "Child", nome: "tunomon"}));
@@ -194,6 +214,14 @@ Digimons.set("Rosemon" , CreateDigimon({estagio: "Mega", nome: "Rosemon", hp:" 3
 
 // Arvore de Evolução
 export const Evolucoes = new Map();
+//Eggs -> children
+Evolucoes.set("Red-Egg", ['gigimon'])
+Evolucoes.set("Yellow-Egg", ['koromon'])
+Evolucoes.set("Grey-Egg", ['tunomon'])
+Evolucoes.set("Purple-Egg", ['tokomon'])
+Evolucoes.set("Green-Egg", ['budmon'])
+Evolucoes.set("Peach-Egg", ['mochimon'])
+Evolucoes.set("Blue-Egg", ['wanyamon'])
 // Children -> Rookie
 Evolucoes.set("gigimon", ["guilmon", "candmon", "dorumon", "agumon", "hagurumon"]);
 Evolucoes.set("koromon", ['agumon', 'guilmon', 'gabumon', 'goburimon', 'tyumon']);
@@ -497,10 +525,7 @@ export function CreateDigimonTable(digimon_name){
     ImagemDigimon.setAttribute("width", "200");
     ImagemDigimon.setAttribute("height", "200");
     ImagemDigimon.setAttribute("class", "Digimon_img");
-    ImagemDigimon.src = Digimons.get(digimon_name).img;
-    if(digimon_name == "greymon"){
-        ImagemDigimon.src = "https://digimon.net/cimages/digimon/greymon-first.jpg";
-    }
+    ImagemDigimon.src = Digimons.get(digimon_name).getImg();
     //tabela do digimon
     const tabela = document.createElement("table");
     tabela.setAttribute("class", "Digimon_table");
@@ -548,6 +573,24 @@ export function CreateDigimonTable(digimon_name){
     return digimonSec;
 }
 
+
+export function find_preEvo(digimon_name){
+    const pre_evo = []
+    Evolucoes.forEach((Evols, Evol_name) => 
+    {
+        Evols.forEach(formas =>{
+            if(formas.toLowerCase() == digimon_name.toLowerCase()){
+                console.log(Evol_name);
+                pre_evo.push(Evol_name);
+            }
+        });
+    });
+    return pre_evo;
+}
+
+export function find_nextEvo(digimon_name){
+    return Evolucoes.get(digimon_name) != undefined ? Evolucoes.get(digimon_name) : [] ;
+}
 
 /*
 Omegamon

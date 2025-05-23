@@ -1,6 +1,10 @@
+body{
+    background-color:#030027;
+    color: #ffffff;
+}
+
 main{
-    background-color: #ffffff;
-    color: #000000;
+    color: #ffffff;
     font-family: Arial, sans-serif;
     font-size: clamp(0.1rem, 1.5vw, 1rem);
     line-height: 1.5em;
@@ -52,6 +56,41 @@ main{
     border-radius: 5px;
 }
 
+/*         PRE EVOLUCAO             */
+.pre_evo_container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.pre_evo_container .Digimon_img {
+  transition: filter 0.3s ease; /* Suaviza a transição */
+  cursor:default;
+}
+
+.pre_evo_container .Digimon_img:hover{
+  cursor: pointer; /* Muda para a "mãozinha" (clicável) */
+  filter: brightness(70%); /* Escurece 30% (100% = normal) */
+}
+
+/*         NEXT EVOLUCAO             */
+
+.nxt_evo_container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.nxt_evo_container .Digimon_img {
+  transition: filter 0.3s ease; /* Suaviza a transição */
+  cursor:default;
+}
+
+.nxt_evo_container .Digimon_img:hover{
+  cursor: pointer; /* Muda para a "mãozinha" (clicável) */
+  filter: brightness(70%); /* Escurece 30% (100% = normal) */
+}
 
 
 
@@ -68,15 +107,6 @@ main{
 }
 
 
-.Digimon_link{
-    text-decoration: none;
-    color: blue;
-    text-transform: uppercase;
-}
-
-.Digimon_link:visited{
-    color:  blue;; 
-}
 
 
 .Digimon_section .Digimon_table{

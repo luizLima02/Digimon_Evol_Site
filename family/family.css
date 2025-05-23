@@ -1,16 +1,14 @@
+body{
+    background-color:#030027;
+    color: #ffffff;
+}
+
 .main{
     background-color: #ffffff;
     color: #000000;
     font-family: Arial, sans-serif;
     font-size: clamp(0.1rem, 1.5vw, 1rem);
     line-height: 1.5em;
-    /*padding-left: 0vw;
-    padding-right: 0vw;
-
-    /*@media (min-width: 768px) {
-        padding-left: 2.5vw;
-        padding-right: 2.5vw;
-    }*/
 }
 
 @media (min-width: 1210px) {
@@ -122,7 +120,8 @@
 
 /* Cabeçalho da tabela */
 .Digimon_table th {
-    background-color: #e0e0e0;
+    color: #000000;
+    background-color: #6293fc;
     border: 1px solid #000;
     padding: 8px 12px;
     text-align: center;
@@ -130,17 +129,20 @@
 }
 
 .Digimon_table td{
+    color: #000000;
     border: 1px solid #000;
     text-align: center;
 }
 
 /* Linhas alternadas para melhor legibilidade */
 .Digimon_table tr:nth-child(even) {
-    background-color: #f0f0f0;
+    background-color: #b1b0b0;
+    color: #000000;
 }
 
 /* Ajuste para a primeira coluna (nomes dos Digimon) */
 .Digimon_table td:first-child {
+    color: #000000;
     font-weight: bold;
     text-align: center;
     
@@ -148,6 +150,7 @@
 
 /* Espaçamento entre células */
 .Digimon_table th, .Digimon_table td {
+    color: #000000;
     white-space: nowrap;
 }
 /*
