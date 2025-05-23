@@ -25,7 +25,7 @@ FamilyButton.appendChild(FamilyBtitle);
 
 //botão Search
 const SearchButton = document.createElement("a");
-SearchButton.setAttribute("href", "./search/index.html");
+SearchButton.setAttribute("href", "./find/index.html");
 const SearchBtitle = document.createElement("h2");
 SearchBtitle.setAttribute("class", "Section_title");
 SearchBtitle.innerHTML = "Search Digimon";
