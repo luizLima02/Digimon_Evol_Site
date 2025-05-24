@@ -9,13 +9,30 @@ main{
     font-size: clamp(0.1rem, 1.5vw, 1rem);
     line-height: 1.5em;
     padding: 5px;
+    
 }
+
+#search_area{
+    text-align: center;
+    width: 300px; /* Largura definida */
+    margin: 0 auto;
+    /*
+    border-style: solid;
+    border-width: 1px;
+    border-color: #fff;
+    */
+}
+
+#search_area #estagios{
+    margin: 5px auto;
+}
+
 
 /*  Stage and others*/
 .Stage_div{
     border: none;
-    border-top: 3px double #333;
-    color: #333;
+    border-top: 3px double #fff;
+    color: #fff;
     overflow: visible;
     text-align: center;
     height: 5px;
@@ -23,7 +40,8 @@ main{
 
 .Stage_div::after{
     background: #fff;
-    content: "§";
+    content: "X";
+    color: #000;
     padding: 0 4px;
     position: relative;
     top: -13px;
@@ -56,7 +74,36 @@ main{
     border-radius: 5px;
 }
 
+/*   Search Content Result */
+#search_result{
+    width: 900px;
+    margin: 0 auto;
+}
+
 /*         PRE EVOLUCAO             */
+
+.pre_evo{
+    background: #ad3232;
+    margin: 10px;
+}
+
+.pre_evo h3{
+    text-align: center;
+    color:#000;
+    /*background: #000;*/
+}
+
+.nxt_evo{
+    background: #ad3232;
+    margin: 10px;
+}
+
+.nxt_evo h3{
+    text-align: center;
+    color:#000;
+    /*background: #000;*/
+}
+
 .pre_evo_container{
     display: flex;
     flex-direction: row;
@@ -64,6 +111,7 @@ main{
 }
 
 .pre_evo_container .Digimon_img {
+  border: #ad3232 solid 1px;
   transition: filter 0.3s ease; /* Suaviza a transição */
   cursor:default;
 }
@@ -83,6 +131,7 @@ main{
 
 
 .nxt_evo_container .Digimon_img {
+  border: #ad3232 solid 1px;
   transition: filter 0.3s ease; /* Suaviza a transição */
   cursor:default;
 }
@@ -107,36 +156,63 @@ main{
 }
 
 
-
-
-.Digimon_section .Digimon_table{
+.Digimon_table{
     border-style: solid;
     border-width: 1px;
-    border-color: #000;
+    border-color: #fff;
+    color: #000;
 }
 
-.Digimon_section .Digimon_table th{
-    background-color: #8bb9df;
+.Digimon_table th{
+    background-color: #578cb8;
     padding: 10px;
     text-align: center;
 }
 
-.Digimon_section  .Digimon_table .Table_row_odd td{
-    background-color: #c4c1c1;
+.Digimon_table td{
+    background-color: #e5ece0;
     padding: 10px;
     text-align: center;
 }
 
-.Digimon_section  .Digimon_table .Table_row_even td{
-    background-color: #ffffff;
-    padding: 10px;
-    text-align: center;
-    border-radius: 5px;
+.Requeriment{
+    font-family: "Helvetica Neue","HelveticaNeue",Arial,sans-serif; /* Fonte similar à da imagem */
+    font-weight: bold;
+    color: red;
 }
 
-.Digimon_section .Digimon_img{
-    border-style: solid;
-    border-width: 1px;
-    border-color: #000;
+
+/* BOTAO E AREA DE SELECAO*/
+
+.btn-flat {
+   margin: 10px auto;
+  /* Cor de fundo e texto */
+  background-color: #3498db; /* Azul (pode personalizar) */
+  color: white;
+
+  /* Remove bordas e sombras */
+  border: none;
+  border-radius: 0; /* Opcional: cantos retos (ou use `border-radius: 4px` para cantos levemente arredondados) */
+  box-shadow: none; /* Remove sombras */
+
+  /* Espaçamento e tipografia */
+  padding: 5px 10px;
+  font-size: 12px;
+  font-family: 'Arial', sans-serif;
+  cursor: pointer;
+
+  /* Efeito hover (opcional) */
+  transition: background-color 0.3s ease; /* Suaviza a transição de cor */
 }
+
+/* Efeito ao passar o mouse (hover) */
+.btn-flat:hover {
+  background-color: #2980b9; /* Cor mais escura */
+}
+
+/* Efeito ao clicar (active) */
+.btn-flat:active {
+  background-color: #1c6ea4; /* Cor ainda mais escura */
+}
+
 

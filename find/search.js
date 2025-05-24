@@ -1,6 +1,6 @@
 
-import { Digimons, Evolucoes,  Eggs, Childs, Rookies, Champions, Perfects, Megas} from '../utils/digimon.js';
-import {find_preEvo, find_nextEvo} from '../utils/digimon.js';
+import { Digimons, Evolucoes,  Req, Childs, Rookies, Champions, Perfects, Megas} from '../utils/digimon.js';
+import {find_preEvo, find_nextEvo, CreateRowDigimon} from '../utils/digimon.js';
 
 const main_div = document.getElementById("main");
 
@@ -36,7 +36,7 @@ main_div.appendChild(info3);
 main_div.appendChild(SearchTitle);
 main_div.appendChild(SearchDiv);
 
-
+////////////////////////////////////////////////////////////////
 
 // Dados dos nomes
 const nomesDigimon = {
@@ -65,7 +65,7 @@ estagioSelect.addEventListener('change', function() {
         // Adiciona a opção padrão
         const defaultOption = document.createElement('option');
         defaultOption.value = '';
-        defaultOption.textContent = 'Selecione um nome...';
+        defaultOption.textContent = 'Select a name...';
         nomeSelect.appendChild(defaultOption);
         
         // Preenche com os nomes do gênero selecionado
@@ -92,7 +92,7 @@ form.addEventListener('submit', function(e) {
         mostra_evolucoes(nome);
 
     } else {
-        alert('Por favor, selecione um gênero e um nome.');
+        alert('Please select a name and stage.');
     }
 });
 
@@ -108,7 +108,16 @@ function mostra_evolucoes(digimon_name){
     //mostra o digimon digimon_name
     const target_digimon = Digimons.get(digimon_name);
     const name = document.createElement('h3');
-    name.innerHTML = digimon_name;
+    name.innerHTML = target_digimon.estagio + ": " + digimon_name;
+    ///requisito
+    if(Req.get(digimon_name) != undefined){
+        const digimon_Req = Req.get(digimon_name);
+        const req_html = document.createElement("p");
+        req_html.setAttribute("class", "Requeriment");
+        req_html.innerHTML = "*" + digimon_Req;
+        target_digimon_div.appendChild(req_html);
+    }
+    //// foto
     const image = document.createElement('img');
     image.src = target_digimon.getImg();
     image.setAttribute("width", "200");
@@ -116,10 +125,30 @@ function mostra_evolucoes(digimon_name){
     image.setAttribute("class", "Digimon_img");
     target_digimon_div.appendChild(name);
     target_digimon_div.appendChild(image);
+    //////tabela do digimon
+    const tabela = document.createElement("table");
+    tabela.setAttribute("class", "Digimon_table");
+    const HeaderNames = ["HP", "MP", "Atk", "Def", "Spd", "Brn", "Weight", "Mistakes", "Happiness", "Discipline", "Battles", "Techs", "Decode", "Quota"];
+    //header da tabela
+    const tableHeader = document.createElement("tr");
+    tableHeader.setAttribute("class", "Table_header");
+    for (let i = 0; i < HeaderNames.length; i++){
+            const header = document.createElement("th");
+            header.innerHTML = HeaderNames[i];
+            tableHeader.append(header);
+    }
+    tabela.appendChild(tableHeader);
+    const table_row = CreateRowDigimon(target_digimon, {w_name: false});
+    tabela.appendChild(table_row);
+    target_digimon_div.appendChild(tabela);
     ////////////////////////////////////
     //Section Name
     const PreEvoName = document.createElement('h3');
     PreEvoName.innerHTML = "Pre-evolution:";
+    const divisao1 = document.createElement('hr');
+    divisao1.setAttribute("class", "Stage_div");
+    const divisao2 = document.createElement('hr');
+    divisao2.setAttribute("class", "Stage_div");
     //div pre evolucao
     const pre_evo_div = document.createElement('div');
     pre_evo_div.setAttribute("class", "pre_evo_container");
@@ -139,10 +168,9 @@ function mostra_evolucoes(digimon_name){
         if(!evo.endsWith("Egg")){
             //// Vai para o Digimon se clicado
             imageEvo.src = target_Evo.getImg();
-            imageEvo.setAttribute("width", "200");
-            imageEvo.setAttribute("height", "200");
+            imageEvo.setAttribute("width", "150");
+            imageEvo.setAttribute("height", "150");
             imageEvo.setAttribute("class", "Digimon_img");
-
             imageEvo.addEventListener("click", ()=>{ choose_digimon(evo); });
         }
         
@@ -188,8 +216,10 @@ function mostra_evolucoes(digimon_name){
     //quando clicar na foto do digimon, mostrar a tabela de requerimentos
     searchResult_div.appendChild(target_digimon_div);
     searchResult_div.appendChild(PreEvoName);
+    searchResult_div.appendChild(divisao1);
     searchResult_div.appendChild(pre_evo_div);
     searchResult_div.appendChild(PosEvoName);
+    searchResult_div.appendChild(divisao2);
     searchResult_div.appendChild(nxt_evo_div);
     
 }
@@ -198,6 +228,10 @@ function choose_digimon(digimon_name){
     //alert(digimon_name+" clicado");
     const d_Atual = Digimons.get(digimon_name);
     mostra_evolucoes(digimon_name, d_Atual.estagio);
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
 }
 
 

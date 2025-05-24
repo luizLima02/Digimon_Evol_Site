@@ -433,7 +433,7 @@ Req.set("Lilithmon", "Defeat Lilithmon in the Demon Lord arc.")
 
 
 // Funcoes
-export function CreateRowDigimon(Digimon){
+export function CreateRowDigimon(Digimon, {w_name = true}){
     const table_row = document.createElement("tr");
     //nome
     const name_data = document.createElement("td");
@@ -491,7 +491,9 @@ export function CreateRowDigimon(Digimon){
     const quota_data = document.createElement("td");
     quota_data.innerHTML = (Digimon.quota == null) ? "-" : Digimon.quota;
 
-    table_row.appendChild(name_data);
+    if(w_name){
+        table_row.appendChild(name_data);
+    }
     table_row.appendChild(hp_data);
     table_row.appendChild(mp_data);
     table_row.appendChild(atk_data);
@@ -546,9 +548,8 @@ export function CreateDigimonTable(digimon_name){
     const next_evolution_size = Evolucoes.get(digimon_name).length;
     const next_evolution = Evolucoes.get(digimon_name);
     for (let i = 0; i < next_evolution_size; i++){
-        console.log(next_evolution[i]);
         const digimon_lido = Digimons.get(next_evolution[i]);
-        const table_row = CreateRowDigimon(digimon_lido);
+        const table_row = CreateRowDigimon(digimon_lido, {});
         if(i % 2 == 0){
             table_row.setAttribute("class", "Table_row_odd");
         }else{
@@ -580,7 +581,6 @@ export function find_preEvo(digimon_name){
     {
         Evols.forEach(formas =>{
             if(formas.toLowerCase() == digimon_name.toLowerCase()){
-                console.log(Evol_name);
                 pre_evo.push(Evol_name);
             }
         });

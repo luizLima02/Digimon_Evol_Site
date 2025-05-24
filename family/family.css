@@ -203,3 +203,34 @@ body{
     object-fit: scale-down;
 }
 
+
+.btn-flat {
+   margin: 10px auto;
+  /* Cor de fundo e texto */
+  background-color: #3498db; /* Azul (pode personalizar) */
+  color: white;
+
+  /* Remove bordas e sombras */
+  border: none;
+  border-radius: 0; /* Opcional: cantos retos (ou use `border-radius: 4px` para cantos levemente arredondados) */
+  box-shadow: none; /* Remove sombras */
+
+  /* Espaçamento e tipografia */
+  padding: 5px 10px;
+  font-size: 12px;
+  font-family: 'Arial', sans-serif;
+  cursor: pointer;
+
+  /* Efeito hover (opcional) */
+  transition: background-color 0.3s ease; /* Suaviza a transição de cor */
+}
+
+/* Efeito ao passar o mouse (hover) */
+.btn-flat:hover {
+  background-color: #2980b9; /* Cor mais escura */
+}
+
+/* Efeito ao clicar (active) */
+.btn-flat:active {
+  background-color: #1c6ea4; /* Cor ainda mais escura */
+}

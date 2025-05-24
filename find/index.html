@@ -7,15 +7,15 @@
        <link rel="stylesheet" href="search.css">
     </head>
     <main id="main">
-        <button onclick="window.location.href='../index.html'">Back</button>
+        <button onclick="window.location.href='../index.html'" class="btn-flat">Back</button>
         <h1 class="Page_Title">Evolution Search</h1>
     </main>
     <div id="search_area">
-        <h1>Selecione um Estagio</h1>
+        <h1>Select a digimon</h1>
         <form id="formEstagios">
-            <label for="estagios">Estagio:</label>
+            <label for="estagios">Stage:</label>
             <select id="estagios" name="estagios" required>
-                <option value="">Selecione...</option>
+                <option value="">Select...</option>
                 <option value="Childs">Childs</option>
                 <option value="Rookies">Rookies</option>
                 <option value="Champions">Champions</option>
@@ -24,13 +24,13 @@
             </select>
             
             <div id="nomeContainer" style="display: none;">
-                <label for="nome">Nome:</label>
+                <label for="nome">Name:</label>
                 <select id="nome" name="nome" required>
                     <!-- Opções serão preenchidas via JavaScript -->
                 </select>
             </div>
             
-            <button type="submit">Enviar</button>
+            <button type="submit" class="btn-flat">Buscar</button>
         </form>
     </div>
     <div id="search_result">
