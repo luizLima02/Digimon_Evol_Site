@@ -210,8 +210,17 @@ Digimons.set("MetalSeadramon" , CreateDigimon({estagio: "Mega", nome: "MetalSead
 Digimons.set("RustTyranomon" , CreateDigimon({estagio: "Mega", nome: "RustTyranomon", hp:" 5600", mp:"3600", atk:"680", def:"420", spd:"400", int:"", peso: "65+", miss:"0", happy:"", disc:"", tech:"40+", decode:"16+", quota:"7"}));
 Digimons.set("Lilithmon" , CreateDigimon({estagio: "Mega", nome: "Lilithmon", hp:" 4600", mp:"", atk:"580", def:"440", spd:"520", int:"650", peso: "40-", miss:"5+", happy:"", disc:"80+", tech:"40+", decode:"16+", quota:"7"}));
 Digimons.set("Rosemon" , CreateDigimon({estagio: "Mega", nome: "Rosemon", hp:" 3300", mp:"4600", atk:"", def:"", spd:"490", int:"560", peso: "42-", miss:"5-", happy:"", disc:"80+", tech:"30+", decode:"15+", quota:"6"}));
-
-
+////
+Digimons.set("Omegamon",  CreateDigimon({estagio: "Mega", nome: "Omegamon", hp:"", mp:"", atk:"", def:"", spd:"", int:"", peso: "", miss:"", happy:"", disc:"", tech:"", decode:"", quota:""}));
+Digimons.set("Chaosmon",  CreateDigimon({estagio: "Mega", nome: "Chaosmon", hp:"", mp:"", atk:"", def:"", spd:"", int:"", peso: "", miss:"", happy:"", disc:"", tech:"", decode:"", quota:""}));
+Digimons.set("Omegamon-x", CreateDigimon({estagio: "Mega", nome: "Omegamon-x", hp:"", mp:"", atk:"", def:"", spd:"", int:"", peso: "", miss:"", happy:"", disc:"", tech:"", decode:"", quota:""}));
+Digimons.set("Rosemon_x", CreateDigimon({estagio: "Mega", nome: "Rosemon_x", hp:"", mp:"", atk:"", def:"", spd:"", int:"", peso: "", miss:"", happy:"", disc:"", tech:"", decode:"", quota:""}));
+Digimons.set("Dukemon_x", CreateDigimon({estagio: "Mega", nome: "Dukemon_x", hp:"", mp:"", atk:"", def:"", spd:"", int:"", peso: "", miss:"", happy:"", disc:"", tech:"", decode:"", quota:""}));
+Digimons.set("WarGreymon_x", CreateDigimon({estagio: "Mega", nome: "WarGreymon_x", hp:"", mp:"", atk:"", def:"", spd:"", int:"", peso: "", miss:"", happy:"", disc:"", tech:"", decode:"", quota:""}));
+Digimons.set("UlforceVdramon_x", CreateDigimon({estagio: "Mega", nome: "UlforceVdramon_x", hp:"", mp:"", atk:"", def:"", spd:"", int:"", peso: "", miss:"", happy:"", disc:"", tech:"", decode:"", quota:""}));
+Digimons.set("Beelzebumon_x", CreateDigimon({estagio: "Mega", nome: "Beelzebumon_x", hp:"", mp:"", atk:"", def:"", spd:"", int:"", peso: "", miss:"", happy:"", disc:"", tech:"", decode:"", quota:""}));
+Digimons.set("Magnamon_x", CreateDigimon({estagio: "Mega", nome: "Magnamon_x", hp:"", mp:"", atk:"", def:"", spd:"", int:"", peso: "", miss:"", happy:"", disc:"", tech:"", decode:"", quota:""}));
+        
 // Arvore de Evolução
 export const Evolucoes = new Map();
 //Eggs -> children
@@ -334,10 +343,10 @@ Evolucoes.set("warumonzaemon" , ['Beelzebumon', 'GranKuwagamon']);
 Evolucoes.set("weregarrumon" , ['zdGarurumon', 'MetalGarurumon', 'MirageGaogamon']);
 //Mega
 Evolucoes.set("Alphamon" , []);
-Evolucoes.set("UlforceVdramon" , []);
+Evolucoes.set("UlforceVdramon" , ["UlforceVdramon_x"]);
 Evolucoes.set("imperialdramonfightermode" , []);
 Evolucoes.set("Vikemon" , []);
-Evolucoes.set("WarGreymon" , []);
+Evolucoes.set("WarGreymon" , ["Omegamon", "WarGreymon_x"]);
 Evolucoes.set("Ofanimon" , []);
 Evolucoes.set("GranKuwagamon" , []);
 Evolucoes.set("Sakuyamon" , []);
@@ -346,30 +355,42 @@ Evolucoes.set("ShineGreymon" , []);
 Evolucoes.set("zdGarurumon" , []);
 Evolucoes.set("Seraphimon" , []);
 Evolucoes.set("Titamon" , []);
-Evolucoes.set("Darkdramon" , []);
-Evolucoes.set("Dukemon" , []);
+Evolucoes.set("Darkdramon" , ["Chaosmon"]);
+Evolucoes.set("Dukemon" , ["Dukemon_x"]);
 Evolucoes.set("Hiandromon" , []);
 Evolucoes.set("Barbamon" , []);
-Evolucoes.set("BanchoLeomon" , []);
+Evolucoes.set("BanchoLeomon" , ["Chaosmon"]);
 Evolucoes.set("Piemon" , []);
 Evolucoes.set("VictoryGreymon" , []);
 Evolucoes.set("Pinochimon" , []);
 Evolucoes.set("PlatinumNumemon" , []);
 Evolucoes.set("PrinceMamemon" , []);
 Evolucoes.set("heraklekabuterimon" , []);
-Evolucoes.set("Beelzebumon" , []);
+Evolucoes.set("Beelzebumon" , ["Beelzebumon_x"]);
 Evolucoes.set("Hououmon" , []);
 Evolucoes.set("Boltmon" , []);
-Evolucoes.set("Magnamon" , []);
+Evolucoes.set("Magnamon" , ["Magnamon_x"]);
 Evolucoes.set("marinangemon" , []);
 Evolucoes.set("MirageGaogamon" , []);
 Evolucoes.set("MugenDramon" , []);
 Evolucoes.set("MetalEtemon" , []);
-Evolucoes.set("MetalGarurumon" , []);
+Evolucoes.set("MetalGarurumon" , ["Omegamon"]);
 Evolucoes.set("MetalSeadramon" , []);
 Evolucoes.set("RustTyranomon" , []);
 Evolucoes.set("Lilithmon" , []);
-Evolucoes.set("Rosemon" , []);
+Evolucoes.set("Rosemon" , ["Rosemon_x"]);
+////
+Evolucoes.set("Omegamon", ["Omegamon-x"]);
+Evolucoes.set("Chaosmon", []);
+Evolucoes.set("Omegamon-x", []);
+Evolucoes.set("Rosemon_x", []);
+Evolucoes.set("Dukemon_x", []);
+Evolucoes.set("WarGreymon_x", []);
+Evolucoes.set("UlforceVdramon_x", []);
+Evolucoes.set("Beelzebumon_x", []);
+Evolucoes.set("Magnamon_x", []);
+                
+
 
 // Rookies Names
 export const Eggs    = ["Red-Egg", "Yellow-Egg", "Grey-Egg", "Purple-Egg", "Green-Egg", "Peach-Egg", "Blue-Egg"];
@@ -397,7 +418,7 @@ export const Perfects = ["lucemonfm", "atlurkabuterimon","andromon","vamdemon","
                         "machgaogamon","mamemon","megaseadramon","megadramon","megalogrowmon","metalgreymon-v",
                         "metaltyranomon","metalmamemon","monzaemon","rizegreymon","lilamon","lilimon",
                         "ladydevimon","warumonzaemon","weregarrumon"
-                    ]
+                    ];
 
 /// Megas
 export const Megas = ["Alphamon","UlforceVdramon","imperialdramonfightermode","Vikemon","WarGreymon","Ofanimon",
@@ -406,34 +427,58 @@ export const Megas = ["Alphamon","UlforceVdramon","imperialdramonfightermode","V
                      "Piemon","VictoryGreymon","Pinochimon","PlatinumNumemon","PrinceMamemon","heraklekabuterimon",
                      "Beelzebumon","Hououmon","Boltmon","Magnamon","marinangemon","MirageGaogamon",
                      "MugenDramon","MetalEtemon","MetalGarurumon","MetalSeadramon","RustTyranomon","Lilithmon",
-                     "Rosemon"
-                    ]
+                     "Rosemon",
+                     "Omegamon", "Chaosmon",
+                     "WarGreymon_x", "Omegamon-x", "Rosemon_x", "Dukemon_x", "UlforceVdramon_x",
+                     "Beelzebumon_x", "Magnamon_x"
+                    ];
+/*
 
+BlackWarGreymon
+X Antibody	
+
+*/
 
 export const Req = new Map();
 //rokie
-Req.set("lucemon", "Clear the \"Final Nightmare\" in the Coliseum \"Heaven\'s Chamber\" after clearing the Demon King Chapter.")
+Req.set("lucemon", "Clear the \"Final Nightmare\" in the Coliseum \"Heaven\'s Chamber\" after clearing the Demon King Chapter.");
 //perfect
-Req.set("garudamon", "Defeat sora twice in the Coliseum.")
-Req.set("monzaemon", "Defeat monzaemon in the Vitium chapter.")
+Req.set("garudamon", "Defeat sora twice in the Coliseum.");
+Req.set("monzaemon", "Defeat monzaemon in the Vitium chapter.");
 //mega
-Req.set("Alphamon", "Defeat Yggdrasil in the X-Antibody arc.")
-Req.set("UlforceVdramon", 'Complete the Demon King chapter.')
-Req.set("WarGreymon", 'Defeat Taichi twice in the Coliseum')
-Req.set("Seraphimon", "Defeat Seraphimon in the Colosseum.")
-Req.set("Titamon", "Complete the Demon King chapter.")
-Req.set("Dukemon", "Defeat Takato 3 times in the Coliseum (20F, 40F, 40F)")
-Req.set("Barbamon", 'After clearing the Demon King chapter, clear \"The Final Nightmare\" in the Coliseum\'s \"Heaven\'s Chamber\".')
-Req.set("Beelzebumon", 'Defeat Beelzebumon in the Vitium chapter')
-Req.set("Magnamon", 'After clearing \"Battle against my Agumon!\" on the 1st floor of the Coliseum and \"Thank you for taking care of my brother\" on the 30th floor, defeat Magnamon on the 40th floor of the Coliseum.')
-Req.set("MugenDramon", "Defeat Mugendramon on Mugen Mountain")
-Req.set("MetalGarurumon", "Defeat Yamato twice in the Coliseum.")
-Req.set("RustTyranomon", "Complete the Demon King chapter.")
-Req.set("Lilithmon", "Defeat Lilithmon in the Demon Lord arc.")
+Req.set("Alphamon", "Defeat Yggdrasil in the X-Antibody arc.");
+Req.set("UlforceVdramon", 'Complete the Demon King chapter.');
+Req.set("WarGreymon", 'Defeat Taichi twice in the Coliseum');
+Req.set("Seraphimon", "Defeat Seraphimon in the Colosseum.");
+Req.set("Titamon", "Complete the Demon King chapter.");
+Req.set("Dukemon", "Defeat Takato 3 times in the Coliseum (20F, 40F, 40F)");
+Req.set("Barbamon", 'After clearing the Demon King chapter, clear \"The Final Nightmare\" in the Coliseum\'s \"Heaven\'s Chamber\".');
+Req.set("Beelzebumon", 'Defeat Beelzebumon in the Vitium chapter');
+Req.set("Magnamon", 'After clearing \"Battle against my Agumon!\" on the 1st floor of the Coliseum and \"Thank you for taking care of my brother\" on the 30th floor, defeat Magnamon on the 40th floor of the Coliseum.');
+Req.set("MugenDramon", "Defeat Mugendramon on Mugen Mountain");
+Req.set("MetalGarurumon", "Defeat Yamato twice in the Coliseum.");
+Req.set("RustTyranomon", "Complete the Demon King chapter.");
+Req.set("Lilithmon", "Defeat Lilithmon in the Demon Lord arc.");
+//Especial Requeriment
+Req.set("zdGarurumon", "Reincarnate From MetalGarurumon");
+Req.set("VictoryGreymon", "Reincarnate From Dukemon");
+//Jogress
+Req.set("Omegamon", "Jogress: Have a WarGreymon equiped and a MetalGarurumon as current, or vice versa.");
+Req.set("Chaosmon", "Jogress: Have a BanchoLeomon equiped and a DarkDramon as current, or vice versa.");
+//Via Item
+Req.set("Omegamon-x", "Use the x-Antibody on Omegamon.");
+Req.set("Rosemon_x", "Use the x-Antibody on Rosemon.");
+Req.set("Dukemon_x", "Use the x-Antibody on Dukemon.");
+Req.set("WarGreymon_x", "Use the x-Antibody on WarGreymon.");
+Req.set("UlforceVdramon_x", "Use the x-Antibody on UlforceVdramon.");
+Req.set("Beelzebumon_x", "Use the x-Antibody on Beelzebumon.");
+Req.set("Magnamon_x", "Use the x-Antibody on Magnamon.");
+
 
 
 // Funcoes
 export function CreateRowDigimon(Digimon, {w_name = true}){
+    let hasTable = false;
     const table_row = document.createElement("tr");
     //nome
     const name_data = document.createElement("td");
@@ -447,49 +492,66 @@ export function CreateRowDigimon(Digimon, {w_name = true}){
         name_link.innerHTML = "lucemonfm";
         digiNome = "lucemonfm"
     }
+    
+    if(w_name == true){hasTable = true;}
+
     name_link.setAttribute("href", "#"+digiNome);
     //hp
     const hp_data = document.createElement("td");
-    hp_data.innerHTML = (Digimon.hp == null) ? "-" : Digimon.hp;
+    hp_data.innerHTML = (Digimon.hp == null || Digimon.hp == "") ? "-" : Digimon.hp;
+    if(hp_data.innerHTML != "-"){hasTable = true;}
     //mp
     const mp_data = document.createElement("td");
-    mp_data.innerHTML = (Digimon.mp == null) ? "-" : Digimon.mp;
+    mp_data.innerHTML = (Digimon.mp == null || Digimon.mp == "") ? "-" : Digimon.mp;
+    if(mp_data.innerHTML != "-"){hasTable = true;}
     //atk
     const atk_data = document.createElement("td");
-    atk_data.innerHTML = (Digimon.atk == null) ? "-" : Digimon.atk;
+    atk_data.innerHTML = (Digimon.atk == null || Digimon.atk == "") ? "-" : Digimon.atk;
+    if(atk_data.innerHTML != "-"){hasTable = true;}
     //def
     const def_data = document.createElement("td");
-    def_data.innerHTML = (Digimon.def == null) ? "-" : Digimon.def;
+    def_data.innerHTML = (Digimon.def == null || Digimon.def == "") ? "-" : Digimon.def;
+    if(def_data.innerHTML != "-"){hasTable = true;}
     //spd
     const spd_data = document.createElement("td");
-    spd_data.innerHTML = (Digimon.spd == null) ? "-" : Digimon.spd;
+    spd_data.innerHTML = (Digimon.spd == null || Digimon.spd == "") ? "-" : Digimon.spd;
+    if(spd_data.innerHTML != "-"){hasTable = true;}
     //brn
     const brn_data = document.createElement("td");
-    brn_data.innerHTML = (Digimon.int == null) ? "-" : Digimon.int;
+    brn_data.innerHTML = (Digimon.int == null || Digimon.int == "") ? "-" : Digimon.int;
+    if(brn_data.innerHTML != "-"){hasTable = true;}
     //peso
     const peso_data = document.createElement("td");
-    peso_data.innerHTML = (Digimon.peso == null) ? "-" : Digimon.peso;
+    peso_data.innerHTML = (Digimon.peso == null || Digimon.peso == "") ? "-" : Digimon.peso;
+    if(peso_data.innerHTML != "-"){hasTable = true;}
     //miss
     const miss_data = document.createElement("td");
-    miss_data.innerHTML = (Digimon.miss == null) ? "-" : Digimon.miss;
+    miss_data.innerHTML = (Digimon.miss == null || Digimon.miss == "") ? "-" : Digimon.miss;
+    if(miss_data.innerHTML != "-"){hasTable = true;}
     //happy
     const happy_data = document.createElement("td");
-    happy_data.innerHTML = (Digimon.happy == null) ? "-" : Digimon.happy;
+    happy_data.innerHTML = (Digimon.happy == null || Digimon.happy == "") ? "-" : Digimon.happy;
+    if(happy_data.innerHTML != "-"){hasTable = true;}
     //dis
     const disc_data = document.createElement("td");
-    disc_data.innerHTML = (Digimon.disc == null) ? "-" : Digimon.disc;
+    disc_data.innerHTML = (Digimon.disc == null || Digimon.disc == "") ? "-" : Digimon.disc;
+    if(disc_data.innerHTML != "-"){hasTable = true;}
     //btl
     const btl_data = document.createElement("td");
-    btl_data.innerHTML = (Digimon.btl == null) ? "-" : Digimon.btl;
+    btl_data.innerHTML = (Digimon.btl == null || Digimon.btl == "") ? "-" : Digimon.btl;
+    if(btl_data.innerHTML != "-"){hasTable = true;}
     //tech
     const tech_data = document.createElement("td");
-    tech_data.innerHTML = (Digimon.tech == null) ? "-" : Digimon.tech;
+    tech_data.innerHTML = (Digimon.tech == null || Digimon.tech == "") ? "-" : Digimon.tech;
+    if(tech_data.innerHTML != "-"){hasTable = true;}
     //decode
     const decode_data = document.createElement("td");
-    decode_data.innerHTML = (Digimon.decode == null) ? "-" : Digimon.decode;
+    decode_data.innerHTML = (Digimon.decode == null || Digimon.decode == "") ? "-" : Digimon.decode;
+    if(decode_data.innerHTML != "-"){hasTable = true;}
     //quota
     const quota_data = document.createElement("td");
-    quota_data.innerHTML = (Digimon.quota == null) ? "-" : Digimon.quota;
+    quota_data.innerHTML = (Digimon.quota == null || Digimon.quota == "") ? "-" : Digimon.quota;
+    if(quota_data.innerHTML != "-"){hasTable = true;}
 
     if(w_name){
         table_row.appendChild(name_data);
@@ -508,7 +570,11 @@ export function CreateRowDigimon(Digimon, {w_name = true}){
     table_row.appendChild(tech_data);
     table_row.appendChild(decode_data);
     table_row.appendChild(quota_data);
-    return table_row;
+    if(hasTable){
+        return table_row;
+    }else{
+        return null;
+    }
 }
 
 export function CreateDigimonTable(digimon_name){

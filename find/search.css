@@ -83,24 +83,46 @@ main{
 /*         PRE EVOLUCAO             */
 
 .pre_evo{
-    background: #ad3232;
-    margin: 10px;
+    width:  250px;
+    height: 270px;
+    display: flex;
+    background: #4a92f0;
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pre_evo img{
+    width: 200px;
+    height: 200px;
 }
 
 .pre_evo h3{
     text-align: center;
-    color:#000;
+    color:#fff;
     /*background: #000;*/
 }
 
 .nxt_evo{
-    background: #ad3232;
+    display: flex;
+    width:  250px;
+    height: 270px;
+    background: #4a92f0;
     margin: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.nxt_evo img{
+    width: 200px;
+    height: 200px;
 }
 
 .nxt_evo h3{
     text-align: center;
-    color:#000;
+    color:#fff;
     /*background: #000;*/
 }
 
@@ -111,7 +133,7 @@ main{
 }
 
 .pre_evo_container .Digimon_img {
-  border: #ad3232 solid 1px;
+  border: #4a92f0 solid 1px;
   transition: filter 0.3s ease; /* Suaviza a transição */
   cursor:default;
 }
@@ -131,9 +153,10 @@ main{
 
 
 .nxt_evo_container .Digimon_img {
-  border: #ad3232 solid 1px;
+  border: #4a92f0 solid 1px;
   transition: filter 0.3s ease; /* Suaviza a transição */
   cursor:default;
+  
 }
 
 .nxt_evo_container .Digimon_img:hover{

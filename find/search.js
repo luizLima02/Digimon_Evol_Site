@@ -8,15 +8,19 @@ const main_div = document.getElementById("main");
 //info
 const info1 = document.createElement("p");
 info1.setAttribute("class", "Info");
-info1.innerHTML = "Up to Champion: HP to Brains parameter conditions are counted as one set. Meeting all of them will give you one \"required number\".";
+info1.innerHTML = "Up to Champion:<br>HP to Brains parameter conditions are counted as one set. Meeting all of them will give you one \"required number\".";
 //info
 const info2 = document.createElement("p");
 info2.setAttribute("class", "Info");
-info2.innerHTML = "Champion to Perfect:\n\"HP & MP\", \"attack & defense\", and \"speed & intelligence\" are counted as a set. In other words, if there are conditions for both, you cannot get one \"required number\" by clearing only one of the conditions.";
+info2.innerHTML = "Champion to Perfect:<br>\"HP & MP\", \"attack & defense\", and \"speed & intelligence\" are counted as a set. In other words, if there are conditions for both, you cannot get one \"required number\" by clearing only one of the conditions.";
 //info
 const info3 = document.createElement("p");
 info3.setAttribute("class", "Info");
-info3.innerHTML = "Perfect to Ultimate: \nFor each parameter, if the conditions are met, you will get one required number.";
+info3.innerHTML = "Perfect to Ultimate:<br>For each parameter, if the conditions are met, you will get one required number.";
+//info
+const info4 = document.createElement("p");
+info4.setAttribute("class", "Info");
+info4.innerHTML = "To reincarnate from a digimon it needs to be the previous one that you raised.<br>EX: to reincanate to zdGarurumon you need to raise a MetalGururumon, and dont save it when it die.";
 
 ////////////////////////////////////////////////// CHILD //////////////////////////////////////////////////////
 //adiciona a secao de childs no main
@@ -32,6 +36,7 @@ SearchDiv.setAttribute("class", "Stage_div");
 main_div.appendChild(info1);
 main_div.appendChild(info2);
 main_div.appendChild(info3);
+main_div.appendChild(info4);
 //search
 main_div.appendChild(SearchTitle);
 main_div.appendChild(SearchDiv);
@@ -109,14 +114,6 @@ function mostra_evolucoes(digimon_name){
     const target_digimon = Digimons.get(digimon_name);
     const name = document.createElement('h3');
     name.innerHTML = target_digimon.estagio + ": " + digimon_name;
-    ///requisito
-    if(Req.get(digimon_name) != undefined){
-        const digimon_Req = Req.get(digimon_name);
-        const req_html = document.createElement("p");
-        req_html.setAttribute("class", "Requeriment");
-        req_html.innerHTML = "*" + digimon_Req;
-        target_digimon_div.appendChild(req_html);
-    }
     //// foto
     const image = document.createElement('img');
     image.src = target_digimon.getImg();
@@ -126,21 +123,49 @@ function mostra_evolucoes(digimon_name){
     target_digimon_div.appendChild(name);
     target_digimon_div.appendChild(image);
     //////tabela do digimon
-    const tabela = document.createElement("table");
-    tabela.setAttribute("class", "Digimon_table");
-    const HeaderNames = ["HP", "MP", "Atk", "Def", "Spd", "Brn", "Weight", "Mistakes", "Happiness", "Discipline", "Battles", "Techs", "Decode", "Quota"];
-    //header da tabela
-    const tableHeader = document.createElement("tr");
-    tableHeader.setAttribute("class", "Table_header");
-    for (let i = 0; i < HeaderNames.length; i++){
-            const header = document.createElement("th");
-            header.innerHTML = HeaderNames[i];
-            tableHeader.append(header);
+    let hasTable = false;
+    if(target_digimon.hp != "" || target_digimon.hp != null){hasTable = true;}
+    if(target_digimon.mp != "" || target_digimon.mp != null){hasTable = true;}
+    if(target_digimon.atk != "" || target_digimon.atk != null){hasTable = true;}
+    if(target_digimon.def != "" || target_digimon.def != null){hasTable = true;}
+    if(target_digimon.spd != "" || target_digimon.spd != null){hasTable = true;}
+    if(target_digimon.int != "" || target_digimon.int != null){hasTable = true;}
+    if(target_digimon.peso != "" || target_digimon.peso != null){hasTable = true;}
+    if(target_digimon.miss != "" || target_digimon.miss != null){hasTable = true;}
+    if(target_digimon.happy != "" || target_digimon.happy != null){hasTable = true;}
+    if(target_digimon.disc != "" || target_digimon.disc != null){hasTable = true;}
+    if(target_digimon.btl != "" || target_digimon.btl != null){hasTable = true;}
+    if(target_digimon.tech != "" || target_digimon.tech != null){hasTable = true;}
+    if(target_digimon.decode != "" || target_digimon.decode != null){hasTable = true;}
+    if(target_digimon.quota != "" || target_digimon.quota != null){hasTable = true;}
+    ////////
+    if(hasTable){
+        const tabela = document.createElement("table");
+        tabela.setAttribute("class", "Digimon_table");
+        const HeaderNames = ["HP", "MP", "Atk", "Def", "Spd", "Brn", "Weight", "Mistakes", "Happiness", "Discipline", "Battles", "Techs", "Decode", "Quota"];
+        //header da tabela
+        const tableHeader = document.createElement("tr");
+        tableHeader.setAttribute("class", "Table_header");
+        for (let i = 0; i < HeaderNames.length; i++){
+                const header = document.createElement("th");
+                header.innerHTML = HeaderNames[i];
+                tableHeader.append(header);
+        }
+        tabela.appendChild(tableHeader);
+        const table_row = CreateRowDigimon(target_digimon, {w_name: false});
+        if(table_row != null){
+            tabela.appendChild(table_row);
+            target_digimon_div.appendChild(tabela);
+        }
     }
-    tabela.appendChild(tableHeader);
-    const table_row = CreateRowDigimon(target_digimon, {w_name: false});
-    tabela.appendChild(table_row);
-    target_digimon_div.appendChild(tabela);
+    ///requisito
+    if(Req.get(digimon_name) != undefined){
+        const digimon_Req = Req.get(digimon_name);
+        const req_html = document.createElement("p");
+        req_html.setAttribute("class", "Info");
+        req_html.innerHTML = "*" + digimon_Req;
+        target_digimon_div.appendChild(req_html);
+    }
     ////////////////////////////////////
     //Section Name
     const PreEvoName = document.createElement('h3');
