@@ -137,7 +137,7 @@ Digimons.set("lucemonfm", CreateDigimon({estagio: "Perfect", nome: "rucemonfalld
 Digimons.set("atlurkabuterimon" , CreateDigimon({estagio: "Perfect", nome: "atlurkabuterimon", hp:" 2600", mp:"", atk:"160", def:"280", spd:"200", int:"", peso: "36+", miss:"10-", btl:"", happy:"80+", disc:"", tech:"40", decode:"16", quota:"5"}));
 Digimons.set("andromon" , CreateDigimon({estagio: "Perfect", nome: "andromon", hp:" 1700", mp:"", atk:"280", def:"210", spd:"", int:"240", peso: "44+", miss:"5-", btl:"", happy:"", disc:"80+", tech:"30", decode:"15", quota:"5"}));
 Digimons.set("vamdemon" , CreateDigimon({estagio: "Perfect", nome: "vamdemon", hp:" 2300", mp:"1400", atk:"220", def:"150", spd:"190", int:"350", peso: "34+", miss:"4+", btl:"", happy:"", disc:"60-", tech:"40", decode:"16", quota:"5"}));
-Digimons.set("aerov-dramon" , CreateDigimon({estagio: "Perfect", nome: "aerov-dramon", hp:" 2400", mp:"", atk:"340", def:"240", spd:"340", int:"", peso: "46+", miss:"5-", btl:"35+", happy:"", disc:"", tech:"49", decode:"18", quota:"5"}));
+Digimons.set("earov-dramon" , CreateDigimon({estagio: "Perfect", nome: "earov-dramon", hp:" 2400", mp:"", atk:"340", def:"240", spd:"340", int:"", peso: "46+", miss:"5-", btl:"35+", happy:"", disc:"", tech:"49", decode:"18", quota:"5"}));
 Digimons.set("etemon" , CreateDigimon({estagio: "Perfect", nome: "etemon", hp:" 2800", mp:"1000", atk:"220", def:"240", spd:"350", int:"180", peso: "33+", miss:"2+", btl:"", happy:"80+", disc:"", tech:"30", decode:"15", quota:"5"}));
 Digimons.set("angewomon" , CreateDigimon({estagio: "Perfect", nome: "angewomon", hp:" ", mp:"1900", atk:"180", def:"210", spd:"320", int:"", peso: "35+", miss:"0", btl:"", happy:"80+", disc:"", tech:"40", decode:"16", quota:"5"}));
 Digimons.set("okuwamon" , CreateDigimon({estagio: "Perfect", nome: "okuwamon", hp:" 2500", mp:"", atk:"320", def:"180", spd:"", int:"80", peso: "48+", miss:"15-", btl:"25+", happy:"", disc:"", tech:"30", decode:"15", quota:"5"}));
@@ -152,7 +152,7 @@ Digimons.set("digitamamon" , CreateDigimon({estagio: "Perfect", nome: "digitamam
 Digimons.set("deathmeramon" , CreateDigimon({estagio: "Perfect", nome: "deathmeramon", hp:" 2500", mp:"", atk:"380", def:"140", spd:"", int:"120", peso: "52+", miss:"2+", btl:"25+", happy:"", disc:"", tech:"30", decode:"15", quota:"5"}));
 Digimons.set("doruguremon" , CreateDigimon({estagio: "Perfect", nome: "doruguremon", hp:" 3200", mp:"1700", atk:"300", def:"320", spd:"270", int:"210", peso: "55+", miss:"10-", btl:"40+", happy:"", disc:"", tech:"49", decode:"18", quota:"5"}));
 Digimons.set("paildramon" , CreateDigimon({estagio: "Perfect", nome: "paildramon", hp:" ", mp:"", atk:"", def:"", spd:"", int:"", peso: "", miss:"", btl:"", happy:"", disc:"", tech:"", decode:"", quota:""}));
-Digimons.set("pandamon" , CreateDigimon({estagio: "Perfect", nome: "pandamon", hp:" 2300", mp:"", atk:"260", def:"200", spd:"210", int:"", peso: "46+", miss:"5-", btl:"30+", happy:"", disc:"", tech:"30", decode:"15", quota:"5"}));
+Digimons.set("panjyamon" , CreateDigimon({estagio: "Perfect", nome: "panjyamon", hp:" 2300", mp:"", atk:"260", def:"200", spd:"210", int:"", peso: "46+", miss:"5-", btl:"30+", happy:"", disc:"", tech:"30", decode:"15", quota:"5"}));
 Digimons.set("picklemon" , CreateDigimon({estagio: "Perfect", nome: "picklemon", hp:" ", mp:"2100", atk:"260", def:"380", spd:"270", int:"", peso: "30+", miss:"5-", btl:"", happy:"95+", disc:"", tech:"49", decode:"15", quota:"5"}));
 Digimons.set("bluemeramon" , CreateDigimon({estagio: "Perfect", nome: "bluemeramon", hp:" 1700", mp:"", atk:"350", def:"180", spd:"100", int:"", peso: "33+", miss:"15-", btl:"25+", happy:"", disc:"", tech:"30", decode:"16", quota:"5"}));
 Digimons.set("vademon" , CreateDigimon({estagio: "Perfect", nome: "vademon", hp:" ", mp:"2300", atk:"210", def:"150", spd:"", int:"260", peso: "38+", miss:"15-", btl:"", happy:"", disc:"60-", tech:"30", decode:"15", quota:"5"}));
@@ -162,7 +162,7 @@ Digimons.set("mamemon" , CreateDigimon({estagio: "Perfect", nome: "mamemon", hp:
 Digimons.set("megaseadramon" , CreateDigimon({estagio: "Perfect", nome: "megaseadramon", hp:" ", mp:"2300", atk:"180", def:"170", spd:"", int:"290", peso: "36+", miss:"10-", btl:"", happy:"", disc:"", tech:"30", decode:"18", quota:"5"}));
 Digimons.set("megadramon" , CreateDigimon({estagio: "Perfect", nome: "megadramon", hp:" 1700", mp:"2300", atk:"300", def:"170", spd:"210", int:"200", peso: "52+", miss:"10-", btl:"25+", happy:"", disc:"", tech:"49", decode:"16", quota:"5"}));
 Digimons.set("megalogrowmon" , CreateDigimon({estagio: "Perfect", nome: "megalogrowmon", hp:" 2600", mp:"", atk:"230", def:"300", spd:"", int:"130", peso: "53+", miss:"5-", btl:"25+", happy:"", disc:"", tech:"40", decode:"16", quota:"5"}));
-Digimons.set("metalgreymon" , CreateDigimon({estagio: "Perfect", nome: "metalgreymon", hp:" 2500", mp:"", atk:"280", def:"190", spd:"190", int:"", peso: "53+", miss:"5-", btl:"25+", happy:"", disc:"95+", tech:"40", decode:"16", quota:"5"}));
+Digimons.set("metalgreymon-v" , CreateDigimon({estagio: "Perfect", nome: "metalgreymon-v", hp:" 2500", mp:"", atk:"280", def:"190", spd:"190", int:"", peso: "53+", miss:"5-", btl:"25+", happy:"", disc:"95+", tech:"40", decode:"16", quota:"5"}));
 Digimons.set("metaltyranomon" , CreateDigimon({estagio: "Perfect", nome: "metaltyranomon", hp:" 2200", mp:"", atk:"310", def:"210", spd:"160", int:"", peso: "55+", miss:"0", btl:"", happy:"", disc:"70+", tech:"40", decode:"16", quota:"5"}));
 Digimons.set("metalmamemon" , CreateDigimon({estagio: "Perfect", nome: "metalmamemon", hp:" 1600", mp:"", atk:"310", def:"220", spd:"", int:"210", peso: "35+", miss:"10-", btl:"35+", happy:"", disc:"", tech:"40", decode:"16", quota:"5"}));
 Digimons.set("monzaemon" , CreateDigimon({estagio: "Perfect", nome: "monzaemon", hp:" 2800", mp:"1200", atk:"180", def:"250", spd:"160", int:"160", peso: "48+", miss:"0", btl:"40+", happy:"", disc:"", tech:"49", decode:"18", quota:"5"}));
@@ -196,7 +196,7 @@ Digimons.set("VictoryGreymon" , CreateDigimon({estagio: "Mega", nome: "VictoryGr
 Digimons.set("Pinochimon" , CreateDigimon({estagio: "Mega", nome: "Pinochimon", hp:" 5200", mp:"4000", atk:"", def:"", spd:"420", int:"480", peso: "42+", miss:"10-", btl:"", happy:"75+", disc:"", tech:"40+", decode:"16+", quota:"6"}));
 Digimons.set("PlatinumNumemon" , CreateDigimon({estagio: "Mega", nome: "PlatinumNumemon", hp:" 5200", mp:"3200", atk:"", def:"550", spd:"", int:"480", peso: "49+", miss:"15-", btl:"", happy:"90+", disc:"", tech:"40+", decode:"16+", quota:"6"}));
 Digimons.set("PrinceMamemon" , CreateDigimon({estagio: "Mega", nome: "PrinceMamemon", hp:" 5300", mp:"", atk:"", def:"350", spd:"550", int:"420", peso: "35-", miss:"3-", btl:"", happy:"100+", disc:"", tech:"40+", decode:"16+", quota:"6"}));
-Digimons.set("HerculesKabuterimon" , CreateDigimon({estagio: "Mega", nome: "HerculesKabuterimon", hp:" 5500", mp:"", atk:"370", def:"560", spd:"360", int:"", peso: "48+", miss:"5-", btl:"", happy:"", disc:"80+", tech:"40+", decode:"16+", quota:"6"}));
+Digimons.set("heraklekabuterimon" , CreateDigimon({estagio: "Mega", nome: "heraklekabuterimon", hp:" 5500", mp:"", atk:"370", def:"560", spd:"360", int:"", peso: "48+", miss:"5-", btl:"", happy:"", disc:"80+", tech:"40+", decode:"16+", quota:"6"}));
 Digimons.set("Beelzebumon" , CreateDigimon({estagio: "Mega", nome: "Beelzebumon", hp:" 5000", mp:"4000", atk:"650", def:"", spd:"650", int:"450", peso: "44+", miss:"5+", btl:"", happy:"55-", disc:"", tech:"40+", decode:"16+", quota:"7"}));
 Digimons.set("Hououmon" , CreateDigimon({estagio: "Mega", nome: "Hououmon", hp:" 2500", mp:"3800", atk:"", def:"340", spd:"380", int:"490", peso: "33+", miss:"10-", btl:"", happy:"", disc:"100+", tech:"40+", decode:"16+", quota:"7"}));
 Digimons.set("Boltmon" , CreateDigimon({estagio: "Mega", nome: "Boltmon", hp:" 4800", mp:"", atk:"600", def:"420", spd:"", int:"320", peso: "58+", miss:"15-", btl:"35+", happy:"", disc:"", tech:"40+", decode:"16+", quota:"6"}));
@@ -274,7 +274,7 @@ Evolucoes.set("xv-mon", ['paildramon', 'earov-dramon', 'rizegreymon']);
 Evolucoes.set("angemon", ['holyangemon', 'angewomon', 'vamdemon']);
 Evolucoes.set("orgemon", ['digitamamon', 'warumonzaemon', 'etemon']); 
 Evolucoes.set("gaogamon", ['machgaogamon', 'weregarrumon', 'grappuleomon']);
-Evolucoes.set("kabuterimon", ['', 'metalmamemon', 'vademon']);
+Evolucoes.set("kabuterimon", ['atlurkabuterimon', 'metalmamemon', 'vademon']);
 Evolucoes.set("garurumon", ['weregarrumon', 'panjyamon', 'metalmamemon']);
 Evolucoes.set("guardromon", ['andromon', 'metalmamemon', 'gigadramon']);
 Evolucoes.set("kyubimon", ['taomon', 'monzaemon', 'ladydevimon']);
