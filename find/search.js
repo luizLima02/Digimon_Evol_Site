@@ -188,17 +188,16 @@ function mostra_evolucoes(digimon_name){
         
         const nameEvo = document.createElement('h3');
         nameEvo.innerHTML = evo;
-        if(target_Evo != undefined){
-            const imageEvo = document.createElement('img');
-            if(!evo.endsWith("Egg")){
-                //// Vai para o Digimon se clicado
-                imageEvo.src = target_Evo.getImg();
-                imageEvo.setAttribute("width", "150");
-                imageEvo.setAttribute("height", "150");
-                imageEvo.setAttribute("class", "Digimon_img");
-                imageEvo.addEventListener("click", ()=>{ choose_digimon(evo); });
-            }
+        const imageEvo = document.createElement('img');
+        if(!evo.endsWith("Egg")){
+            //// Vai para o Digimon se clicado
+            imageEvo.src = target_Evo.getImg();
+            imageEvo.setAttribute("width", "150");
+            imageEvo.setAttribute("height", "150");
+            imageEvo.setAttribute("class", "Digimon_img");
+            imageEvo.addEventListener("click", ()=>{ choose_digimon(evo); });
         }
+        
         
         ///
         evo_div.appendChild(nameEvo);
@@ -225,15 +224,14 @@ function mostra_evolucoes(digimon_name){
 
         const nameEvo = document.createElement('h3');
         nameEvo.innerHTML = evo;
-        if(target_Evo != undefined){
-            const imageEvo = document.createElement('img');
-            
-            imageEvo.src = target_Evo.getImg();
-            imageEvo.setAttribute("width", "200");
-            imageEvo.setAttribute("height", "200");
-            imageEvo.setAttribute("class", "Digimon_img");
-            imageEvo.addEventListener("click", ()=>{ choose_digimon(evo); });
-        }
+        const imageEvo = document.createElement('img');
+        
+        imageEvo.src = target_Evo.getImg();
+        imageEvo.setAttribute("width", "200");
+        imageEvo.setAttribute("height", "200");
+        imageEvo.setAttribute("class", "Digimon_img");
+        imageEvo.addEventListener("click", ()=>{ choose_digimon(evo); });
+        
         evo_div.appendChild(nameEvo);
         evo_div.appendChild(imageEvo);
         //adiciona ao container
