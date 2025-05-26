@@ -27,7 +27,7 @@ for linha in arquivoEntrada:
     deco = valores[14]
     quo = valores[15]
 
-    s = f"Digimons.set(\"{nome}\" , CreateDigimon({{estagio: \"{estagio}\", nome: \"{nome}\", hp:\" {hp}\", mp:\"{mp}\", atk:\"{atk}\", def:\"{defe}\", spd:\"{spd}\", int:\"{inte}\", peso: \"{peso}\", miss:\"{miss}\", happy:\"{happ}\", disc:\"{dis}\", tech:\"{tech}\", decode:\"{deco}\", quota:\"{quo}\"}}));\n"
+    s = f"Digimons.set(\"{nome}\" , CreateDigimon({{estagio: \"{estagio}\", nome: \"{nome}\", hp:\" {hp}\", mp:\"{mp}\", atk:\"{atk}\", def:\"{defe}\", spd:\"{spd}\", int:\"{inte}\", peso: \"{peso}\", miss:\"{miss}\", btl:\"{btl}\", happy:\"{happ}\", disc:\"{dis}\", tech:\"{tech}\", decode:\"{deco}\", quota:\"{quo}\"}}));\n"
     
     lista_String += f"\"{nome}\","
 
