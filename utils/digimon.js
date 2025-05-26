@@ -166,7 +166,7 @@ Digimons.set("metalgreymon" , CreateDigimon({estagio: "Perfect", nome: "metalgre
 Digimons.set("metaltyranomon" , CreateDigimon({estagio: "Perfect", nome: "metaltyranomon", hp:" 2200", mp:"", atk:"310", def:"210", spd:"160", int:"", peso: "55+", miss:"0", btl:"", happy:"", disc:"70+", tech:"40", decode:"16", quota:"5"}));
 Digimons.set("metalmamemon" , CreateDigimon({estagio: "Perfect", nome: "metalmamemon", hp:" 1600", mp:"", atk:"310", def:"220", spd:"", int:"210", peso: "35+", miss:"10-", btl:"35+", happy:"", disc:"", tech:"40", decode:"16", quota:"5"}));
 Digimons.set("monzaemon" , CreateDigimon({estagio: "Perfect", nome: "monzaemon", hp:" 2800", mp:"1200", atk:"180", def:"250", spd:"160", int:"160", peso: "48+", miss:"0", btl:"40+", happy:"", disc:"", tech:"49", decode:"18", quota:"5"}));
-Digimons.set("risegreymon" , CreateDigimon({estagio: "Perfect", nome: "risegreymon", hp:" 2100", mp:"", atk:"310", def:"240", spd:"", int:"160", peso: "48+", miss:"5-", btl:"25+", happy:"", disc:"", tech:"40", decode:"16", quota:"5"}));
+Digimons.set("rizegreymon" , CreateDigimon({estagio: "Perfect", nome: "risegreymon", hp:" 2100", mp:"", atk:"310", def:"240", spd:"", int:"160", peso: "48+", miss:"5-", btl:"25+", happy:"", disc:"", tech:"40", decode:"16", quota:"5"}));
 Digimons.set("lilamon" , CreateDigimon({estagio: "Perfect", nome: "lilamon", hp:" ", mp:"2600", atk:"", def:"180", spd:"210", int:"250", peso: "35-", miss:"5-", btl:"", happy:"80+", disc:"", tech:"30", decode:"15", quota:"5"}));
 Digimons.set("lilimon" , CreateDigimon({estagio: "Perfect", nome: "lilimon", hp:" ", mp:"2400", atk:"190", def:"", spd:"220", int:"250", peso: "30-", miss:"10-", btl:"40+", happy:"", disc:"", tech:"40", decode:"15", quota:"5"}));
 Digimons.set("ladydevimon" , CreateDigimon({estagio: "Perfect", nome: "ladydevimon", hp:" ", mp:"2000", atk:"210", def:"", spd:"320", int:"160", peso: "33-", miss:"4+", btl:"", happy:"80+", disc:"", tech:"40", decode:"16", quota:"5"}));
@@ -274,7 +274,7 @@ Evolucoes.set("xv-mon", ['paildramon', 'earov-dramon', 'rizegreymon']);
 Evolucoes.set("angemon", ['holyangemon', 'angewomon', 'vamdemon']);
 Evolucoes.set("orgemon", ['digitamamon', 'warumonzaemon', 'etemon']); 
 Evolucoes.set("gaogamon", ['machgaogamon', 'weregarrumon', 'grappuleomon']);
-Evolucoes.set("kabuterimon", ['atlurkabuterimon', 'metalmamemon', 'vademon']);
+Evolucoes.set("kabuterimon", ['', 'metalmamemon', 'vademon']);
 Evolucoes.set("garurumon", ['weregarrumon', 'panjyamon', 'metalmamemon']);
 Evolucoes.set("guardromon", ['andromon', 'metalmamemon', 'gigadramon']);
 Evolucoes.set("kyubimon", ['taomon', 'monzaemon', 'ladydevimon']);
